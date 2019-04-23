@@ -5,7 +5,7 @@
     <title></title>
   </head>
   <body>
-    <h1> ¡¡¡ La bomba !!! </h1>
+    <h1 id="bomb"> ¡¡¡ La bomba !!! </h1>
     <h2 id="timer">15</h2>
     <script>
         var timer_tag = document.getElementById('timer');
@@ -15,7 +15,8 @@
           timer = timer - 1
           timer_tag.innerHTML = timer
           if (timer == 0) {
-            clearInterval(time)
+            clearInterval(time);
+            document.getElementById('bomb').innerHTML = "BOOM!";
           }
         }, 1000);
     </script>
