@@ -5,33 +5,19 @@ function sortList() {
       create_element('string', element);
     }
     else if(is_par(element)){
-      create_element('par', element)
+      create_element('par', element);
     }
     else{
-      create_element('impar', element)
+      create_element('impar', element);
     }
   });
 }
 
 function is_par(n) {
-  if (n===1)
-  {
-    return false;
-  }
-  else if(n === 2)
-  {
+  if(n % 2 === 0)
     return true;
-  }else
-  {
-    for(var x = 2; x < n; x++)
-    {
-      if(n % x === 0)
-      {
-        return false;
-      }
-    }
-    return true;  
-  }
+  else
+    return false;
 }
 
 function create_element(x, element) {
